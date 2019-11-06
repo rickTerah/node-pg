@@ -1,6 +1,6 @@
 const request = require('supertest');
 
-let server;
+let server = require('../../index');
 
 describe('api/genres', () => {
     beforeEach( () => { server = require('../../index')})

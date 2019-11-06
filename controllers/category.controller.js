@@ -15,7 +15,7 @@ class CategoryContoller {
 
 
     static async getSingleCategory(req, res){
-        const categoryId = parseInt(req.params.id);
+        const categoryId = req.params.id;
         const category = await db.query(`SELECT * FROM categories WHERE categoryId = ${categoryId}`);
         if (category.rows.length === 0) return res.status(404).json({
             status: 'error',

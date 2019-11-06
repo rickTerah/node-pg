@@ -3,7 +3,7 @@ const ArticleController = require('../controllers/article.controller');
 
 const router = express.Router();
 
-router.get('/api/v', ArticleController.getAllArticles);
+router.get('/', ArticleController.getAllArticles);
 router.get('/:id', ArticleController.getSingleArticle);
 router.post('/', ArticleController.createSingleArticle);
 router.patch('/:id', ArticleController.updateSingleArticle);
