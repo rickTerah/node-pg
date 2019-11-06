@@ -17,5 +17,4 @@ services:
   - postgresql
 
 before_script:
-  - psql -c "CREATE DATABASE pg-node-travis-test;" -U postgres
-  - psql -c "CREATE USER postgres WITH PASSWORD 'Svu5ncka';" -U postgres
+  - psql -c 'create database travis_ci_test;' -U postgres
