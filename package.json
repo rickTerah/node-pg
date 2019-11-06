@@ -34,11 +34,5 @@
       "error",
       "windows"
     ]
-  },
-  "jest": {
-    "testEnvironment": "node",
-    "coveragePathIgnorePatterns": [
-      "/node_modules/"
-    ]
   }
 }
