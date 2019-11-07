@@ -18,6 +18,6 @@ app.use('/api/articleComment', articleComments);
 app.use('/api/gifComment', gifComments);
 
 const port = process.env.PORT || 2500;
-const server = app.listen(port, console.log(`Listening to port ${port}...`));
+const server = app.listen(port);
 
 module.exports = server;
