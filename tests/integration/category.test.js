@@ -33,11 +33,6 @@ describe('api/categories', () => {
     });
 
     describe('POST /', () => {
-        // it('should return a 401 if Employee is not logged in', async () => {
-        //     const category = { categoryId: 2, categoryName: 'first category'};
-        //     const res = await request(server).post('api/categories').send(category);
-        //     expect(res.status).toBe(401);
-        // });
 
         it('should return a 400 if category name is less than 2 character', async () => {
             const category = { categoryId: 3, categoryName: 'a'};

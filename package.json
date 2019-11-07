@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --detectOpenHandles --watchAll --verbose --coverage",
+    "build": "babel tests -d build",
     "generate-lcov": "nyc report --reporter=text-lcov > lcov.info",
     "coveralls-coverage": "coveralls < lcov.info",
     "codeclimate-coverage": "codeclimate-test-reporter < lcov.info",
@@ -27,6 +28,8 @@
     "supertest": "^4.0.2"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
     "eslint": "^6.6.0",
     "nodemon": "^1.19.4"
   },
