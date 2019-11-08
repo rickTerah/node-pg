@@ -30,7 +30,6 @@ class ArticleController {
             data: article.rows[0]
         });
     };
-
     static async createSingleArticle(req, res){
         const { error } = validateArticle(req.body);
         if (error) return res.status(400).json({
@@ -110,3 +109,8 @@ const validateArticle = article => {
 
 
 module.exports = ArticleController;
+
+const joiValidation = item => {
+    const { error } = validateArticle(item);
+    if (error) return res.status(400).json({message: error.details[0].message});
+}
