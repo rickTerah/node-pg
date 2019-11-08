@@ -1,9 +1,0 @@
-engines:
-checks:
-  similar-code:
-    enabled: false
-  identical-code:
-    enabled: false
-plugins:
-  duplication:
-    enabled: false
