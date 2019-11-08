@@ -3,12 +3,18 @@ const db = require('../../models/db/index');
 
 let server;
 
+
 describe('api/categories', () => {
-    beforeEach( () => { server = require('../../index'); })
+    beforeEach( () => { 
+        server = require('../../index'); 
+    });
     afterEach( async () => { 
-        server.close();
+        await server.close();
         await db.query('DELETE FROM categories');
-    })
+    });
+    afterAll(async () => {
+        await new Promise(resolve => setTimeout(() => resolve(), 500));
+    });
 
     describe('GET', () => {
         it ('should return all categories', async () => {
