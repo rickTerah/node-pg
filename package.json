@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --detectOpenHandles --watchAll --verbose --coverage",
+    "test": "jest --detectOpenHandles --forceExit --watchAll --verbose --coverage",
     "generate-lcov": "nyc report --reporter=text-lcov > lcov.info",
     "coveralls-coverage": "coveralls < lcov.info",
     "codeclimate-coverage": "codeclimate-test-reporter < lcov.info",
