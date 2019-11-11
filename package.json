@@ -5,10 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --detectOpenHandles --forceExit --coverage --maxWorkers=1",
-    "generate-lcov": "nyc report --reporter=text-lcov > lcov.info",
-    "coveralls-coverage": "coveralls < lcov.info",
-    "codeclimate-coverage": "codeclimate-test-reporter < lcov.info",
-    "coverage": "nyc npm test && npm run generate-lcov && npm run coveralls-coverage && npm run codeclimate-coverage"
+    "coverage": "jest --detectOpenHandles --forceExit --maxWorkers=1 --coverage --coverageReporters=text-lcov | coveralls"
   },
   "keywords": [],
   "author": "",
@@ -29,8 +26,11 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
+    "codeclimate-test-reporter": "^0.5.1",
+    "coveralls": "^3.0.7",
     "eslint": "^6.6.0",
-    "nodemon": "^1.19.4"
+    "nodemon": "^1.19.4",
+    "nyc": "^14.1.1"
   },
   "rules": {
     "linebreak-style": 0,
