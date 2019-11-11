@@ -26,11 +26,9 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
-    "codeclimate-test-reporter": "^0.5.1",
     "coveralls": "^3.0.7",
     "eslint": "^6.6.0",
-    "nodemon": "^1.19.4",
-    "nyc": "^14.1.1"
+    "nodemon": "^1.19.4"
   },
   "rules": {
     "linebreak-style": 0,
