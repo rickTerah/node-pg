@@ -25,7 +25,7 @@ describe('api/categories', () => {
 
     describe('GET /:id', () => {
         it('should return a 200 if a valid id is passed', async () => {
-        const category = await db.query(
+        await db.query(
                 `INSERT INTO categories (categoryId, categoryName) 
                 VALUES (12, 'first category')`);
         const res = await request(server).get('/api/categories/' + 12);
